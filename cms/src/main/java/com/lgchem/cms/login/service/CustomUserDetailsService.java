@@ -9,6 +9,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.lgchem.cms.login.domain.Member;
@@ -23,6 +25,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Autowired
 	UserMapper userMapper;
 
+	private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+	
 	@Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         
@@ -38,5 +42,24 @@ public class CustomUserDetailsService implements UserDetailsService {
 		roles.forEach(role -> list.add(new SimpleGrantedAuthority(ROLE_PREFIX + role)));
 		return list;
 	}
+	
+
+    public PasswordEncoder passwordEncoder() {
+         return this.passwordEncoder;
+    }
+    
+     public void createUser(Member member) {
+          String rawPassword = member.getPassword();
+          String encodedPassword = new BCryptPasswordEncoder().encode(rawPassword);
+          member.setPassword(encodedPassword);
+          userMapper.createUser(member);
+          userMapper.createAuthority(member);
+     }
+
+     public void deleteUser(String username) {
+          userMapper.deleteUser(username);
+          userMapper.deleteAuthority(username);
+     }
+
 
 }

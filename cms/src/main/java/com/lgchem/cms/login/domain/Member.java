@@ -4,12 +4,13 @@ import java.util.Collection;
 
 import org.apache.ibatis.type.Alias;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import lombok.Data;
  
 @Data
 @Alias("Member")
-public class Member {
+public class Member implements UserDetails {
  
     private String username;
     

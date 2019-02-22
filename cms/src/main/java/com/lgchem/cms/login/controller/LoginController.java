@@ -1,9 +1,10 @@
 package com.lgchem.cms.login.controller;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,47 +13,27 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.lgchem.cms.login.domain.LoginVO;
-import com.lgchem.cms.login.service.LoginService;
+import com.lgchem.cms.login.domain.Member;
+import com.lgchem.cms.login.service.CustomUserDetailsService;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping("login")
 public class LoginController {
-
-	@Resource
-	private LoginService loginservice;
 	
-	@RequestMapping(value = "/loginForm", method = RequestMethod.GET)
+	@Autowired private CustomUserDetailsService customUserDetailsService;
+	
+	@RequestMapping(value = "/login/loginForm", method = RequestMethod.GET)
 	public ModelAndView loginForm(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mav = new ModelAndView();
 		return mav;
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public @ResponseBody LoginVO login(HttpServletRequest request, HttpServletResponse response) {
 
-		String userid = request.getParameter("userid");
-		String password = request.getParameter("password");
-		
-		log.info("ddddd = " + userid);
-		
-		LoginVO member = new LoginVO();
-		member.setUserId(userid);
-		member.setPassword(password);
-		
-		LoginVO loginVO = loginservice.login(member);
-		
-		log.info("id = " + loginVO.getUserId());
-		log.info("pw = " + loginVO.getPassword());
-				
-		return loginVO;
-	}
-
-	@RequestMapping("test")
+	@RequestMapping("/test")
 	public String test() {
-		log.debug("�뀒�뒪�듃�엯�땲�떎.");
+		log.debug("테스트 입니다..");
 		return "This is spring";
 	}
 	
@@ -62,6 +43,23 @@ public class LoginController {
 		log.debug("TestForm : {}", json);
 
 		return json;
+	}
+	
+	@RequestMapping("/userReg")
+	public String userReg() {
+		Member member = new Member();
+		member.setUsername("killbeun");
+		member.setPassword("123456");
+		member.setAccountNonExpired(true);
+		member.setAccountNonLocked(true);
+		member.setName("USER1");
+		member.setCredentialsNonExpired(true);
+		member.setEnabled(true);
+		member.setAuthorities(AuthorityUtils.createAuthorityList("USER"));
+		
+		customUserDetailsService.createUser(member);
+		
+		return "성공";
 	}
 
 }
