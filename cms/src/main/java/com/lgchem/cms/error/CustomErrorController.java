@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class CustomErrorController implements ErrorController {
 
-	@RequestMapping("/error")
+	@RequestMapping("/error.do")
 	@ResponseBody
 	public String handleError(HttpServletRequest request) {
 		Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
@@ -25,6 +25,6 @@ public class CustomErrorController implements ErrorController {
 
 	@Override
 	public String getErrorPath() {
-		return "/error";
+		return "/error.do";
 	}
 }

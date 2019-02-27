@@ -26,40 +26,38 @@ public class CustomUserDetailsService implements UserDetailsService {
 	UserMapper userMapper;
 
 	private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-	
+
 	@Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        
-        Member member = userMapper.readUser(username);
-        if(member != null) {
-        	member.setAuthorities(makeGrantedAuthority(userMapper.readAuthority(username)));
-        }
-        return new SecurityMember(member);
-    }
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+		Member member = userMapper.readUser(username);
+		if (member != null) {
+			member.setAuthorities(makeGrantedAuthority(userMapper.readAuthority(username)));
+		}
+		return new SecurityMember(member);
+	}
 
 	static List<GrantedAuthority> makeGrantedAuthority(List<String> roles) {
 		List<GrantedAuthority> list = new ArrayList<>();
 		roles.forEach(role -> list.add(new SimpleGrantedAuthority(ROLE_PREFIX + role)));
 		return list;
 	}
-	
 
-    public PasswordEncoder passwordEncoder() {
-         return this.passwordEncoder;
-    }
-    
-     public void createUser(Member member) {
-          String rawPassword = member.getPassword();
-          String encodedPassword = new BCryptPasswordEncoder().encode(rawPassword);
-          member.setPassword(encodedPassword);
-          userMapper.createUser(member);
-          userMapper.createAuthority(member);
-     }
+	public PasswordEncoder passwordEncoder() {
+		return this.passwordEncoder;
+	}
 
-     public void deleteUser(String username) {
-          userMapper.deleteUser(username);
-          userMapper.deleteAuthority(username);
-     }
+	public void createUser(Member member) {
+		String rawPassword = member.getPassword();
+		String encodedPassword = new BCryptPasswordEncoder().encode(rawPassword);
+		member.setPassword(encodedPassword);
+		userMapper.createUser(member);
+		userMapper.createAuthority(member);
+	}
 
+	public void deleteUser(String username) {
+		userMapper.deleteUser(username);
+		userMapper.deleteAuthority(username);
+	}
 
 }

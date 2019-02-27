@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
-<header>
-гЛ╢У ют╢о╢ы.
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<header class="header">
+М≈╓К█■Л·┘К▀┬К▀╓.
 </header>
