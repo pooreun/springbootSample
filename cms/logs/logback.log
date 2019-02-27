@@ -1,8 +1,0 @@
-[2019-02-21 11:26:03:1649][main] INFO  com.lgchem.cms.CmsApplicationTests - Starting CmsApplicationTests on SM-060-PC with PID 103140 (started by SM-060 in D:\workspace_LGCMS\cms)
-[2019-02-21 11:26:03:1650][main] INFO  com.lgchem.cms.CmsApplicationTests - The following profiles are active: local
-[2019-02-21 14:33:42:1417][main] INFO  com.lgchem.cms.CmsApplicationTests - Starting CmsApplicationTests on SM-060-PC with PID 14468 (started by SM-060 in D:\workspace_LGCMS\cms)
-[2019-02-21 14:33:42:1418][main] INFO  com.lgchem.cms.CmsApplicationTests - The following profiles are active: local
-[2019-02-21 14:33:47:6247][main] INFO  com.lgchem.cms.CmsApplicationTests - Started CmsApplicationTests in 5.447 seconds (JVM running for 7.087)
-[2019-02-21 14:35:06:1700][main] INFO  com.lgchem.cms.CmsApplicationTests - Starting CmsApplicationTests on SM-060-PC with PID 16588 (started by SM-060 in D:\workspace_LGCMS\cms)
-[2019-02-21 14:35:06:1701][main] INFO  com.lgchem.cms.CmsApplicationTests - The following profiles are active: local
-[2019-02-21 14:35:10:6134][main] INFO  com.lgchem.cms.CmsApplicationTests - Started CmsApplicationTests in 5.307 seconds (JVM running for 6.739)
