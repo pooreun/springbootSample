@@ -54,6 +54,10 @@ public class CustomUserDetailsService implements UserDetailsService {
 		userMapper.createUser(member);
 		userMapper.createAuthority(member);
 	}
+	
+	public void updateUser(Member member) {
+		userMapper.createUser(member);
+	}
 
 	public void deleteUser(String username) {
 		userMapper.deleteUser(username);

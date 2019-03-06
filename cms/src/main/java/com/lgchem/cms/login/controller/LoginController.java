@@ -4,9 +4,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,13 +29,28 @@ public class LoginController {
 
 	@Autowired
 	private CustomUserDetailsService customUserDetailsService;
-
+	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView loginForm(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("/login/login");
 		return mav;
 	}
+	
+	@RequestMapping(value="/logout", method = RequestMethod.GET)
+	public ModelAndView logoutPage (HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView();
+	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    if (auth != null){
+	    	log.info(auth.getName() + "( "+ auth.getAuthorities() +")"  + "로그아웃 한다.");
+	        new SecurityContextLogoutHandler().logout(request, response, auth);
+	    }else {
+	    	log.info("인증 정보가 없다");
+	    }
+	    mav.setViewName("/login/login");
+		return mav;
+	}
+	
 
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public ModelAndView loginProcessing(HttpServletRequest request, HttpServletResponse response) {
@@ -63,7 +80,7 @@ public class LoginController {
 	@RequestMapping("/userReg")
 	public String userReg() {
 		Member member = new Member();
-		member.setUsername("killbeun");
+		member.setUsername("poo9901");
 		member.setPassword("123456");
 		member.setAccountNonExpired(true);
 		member.setAccountNonLocked(true);
