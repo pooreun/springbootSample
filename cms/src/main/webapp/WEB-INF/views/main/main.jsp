@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <!DOCTYPE html>
 <html>
@@ -8,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-로그인 완료<br/>
+<spring:message code="login.completed" /><br/>
 <sec:authentication var="principal" property="principal" />
 <br/>
 <%-- 아이디 : <c:out value="${sessionScope.name}"/><br/> 

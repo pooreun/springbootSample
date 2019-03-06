@@ -64,7 +64,8 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
         			if(exp.getClass().isAssignableFrom(BadCredentialsException.class)){
         				errMsg="Invalid username or password.";
         			}else{
-        				errMsg="Unknown error - "+exp.getMessage();
+        				//exp.getLocalizedMessage();
+        				errMsg= exp.getMessage();
         			}
         			req.getSession().setAttribute("message", errMsg);
         			res.sendRedirect("/cms/login"); // Redirect user to login page with error message.
@@ -100,4 +101,6 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
     public static ServletListenerRegistrationBean httpSessionEventPublisher() {
         return new ServletListenerRegistrationBean(new HttpSessionEventPublisher());
     }
+    
+    
 }

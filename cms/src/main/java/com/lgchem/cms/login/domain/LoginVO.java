@@ -5,6 +5,7 @@ import org.apache.ibatis.type.Alias;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -13,6 +14,7 @@ import lombok.ToString;
 @JsonDeserialize
 @NoArgsConstructor
 @ToString
+@EqualsAndHashCode(of = "userId")
 public class LoginVO {
 	
 	private String userId;
