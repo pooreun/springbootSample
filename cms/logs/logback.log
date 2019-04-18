@@ -1,0 +1,120 @@
+[2019-04-03 10:58:24:862][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 54944 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 10:58:24:864][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 10:58:29:5452][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 5.259 seconds (JVM running for 6.819)
+[2019-04-03 10:59:00:36753][http-nio-8080-exec-6] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login Success... - com.lgchem.cms.login.domain.SecurityMember@17862: Username: abc; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER
+[2019-04-03 10:59:00:36755][http-nio-8080-exec-6] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login IP.... - 0:0:0:0:0:0:0:1
+[2019-04-03 11:04:11:821][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 46340 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 11:04:11:822][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 11:04:15:4832][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 4.651 seconds (JVM running for 6.298)
+[2019-04-03 11:04:45:34837][http-nio-8080-exec-5] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login Success... - com.lgchem.cms.login.domain.SecurityMember@17862: Username: abc; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER
+[2019-04-03 11:04:45:34839][http-nio-8080-exec-5] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login IP.... - 0:0:0:0:0:0:0:1
+[2019-04-03 11:06:16:895][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 44784 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 11:06:16:896][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 11:06:20:4903][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 4.732 seconds (JVM running for 6.233)
+[2019-04-03 11:06:35:20416][http-nio-8080-exec-5] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login Success... - com.lgchem.cms.login.domain.SecurityMember@17862: Username: abc; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER
+[2019-04-03 11:06:35:20418][http-nio-8080-exec-5] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login IP.... - 0:0:0:0:0:0:0:1
+[2019-04-03 11:06:44:28887][http-nio-8080-exec-8] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:07:38:83824][http-nio-8080-exec-1] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:07:46:91088][http-nio-8080-exec-10] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:07:54:99184][http-nio-8080-exec-6] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:08:04:109746][http-nio-8080-exec-9] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:08:17:122869][http-nio-8080-exec-10] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:08:25:130544][http-nio-8080-exec-5] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:08:50:155033][http-nio-8080-exec-8] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:09:04:857][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 60224 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 11:09:04:858][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 11:09:08:5110][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 4.917 seconds (JVM running for 6.385)
+[2019-04-03 11:11:42:828][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 49060 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 11:11:42:829][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 11:11:47:5517][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 5.344 seconds (JVM running for 6.882)
+[2019-04-03 11:11:58:845][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 59600 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 11:11:58:846][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 11:12:03:4935][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 4.742 seconds (JVM running for 6.351)
+[2019-04-03 11:14:03:864][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 40948 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 11:14:03:866][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 11:14:07:4988][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 4.798 seconds (JVM running for 6.404)
+[2019-04-03 11:14:40:38681][http-nio-8080-exec-6] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login Success... - com.lgchem.cms.login.domain.SecurityMember@17862: Username: abc; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER
+[2019-04-03 11:14:40:38684][http-nio-8080-exec-6] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login IP.... - 0:0:0:0:0:0:0:1
+[2019-04-03 11:14:48:46302][http-nio-8080-exec-8] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:15:50:108056][http-nio-8080-exec-9] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:16:02:120075][http-nio-8080-exec-1] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:16:14:815][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 56116 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 11:16:14:817][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 11:16:18:5149][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 4.968 seconds (JVM running for 6.523)
+[2019-04-03 11:16:39:25848][http-nio-8080-exec-5] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login Success... - com.lgchem.cms.login.domain.SecurityMember@17862: Username: abc; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER
+[2019-04-03 11:16:39:25850][http-nio-8080-exec-5] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login IP.... - 0:0:0:0:0:0:0:1
+[2019-04-03 11:16:47:33793][http-nio-8080-exec-8] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:16:47:33793][http-nio-8080-exec-8] INFO 
+				c.l.c.f.c.UploadFileController - file 갯수0
+[2019-04-03 11:17:58:105316][http-nio-8080-exec-2] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:17:58:105316][http-nio-8080-exec-2] INFO 
+				c.l.c.f.c.UploadFileController - file 갯수0
+[2019-04-03 11:19:16:183258][http-nio-8080-exec-9] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login Success... - com.lgchem.cms.login.domain.SecurityMember@17862: Username: abc; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER
+[2019-04-03 11:19:16:183259][http-nio-8080-exec-9] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login IP.... - 0:0:0:0:0:0:0:1
+[2019-04-03 11:19:25:191679][http-nio-8080-exec-10] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:19:25:191680][http-nio-8080-exec-10] INFO 
+				c.l.c.f.c.UploadFileController - file 갯수0
+[2019-04-03 11:19:35:201628][http-nio-8080-exec-6] INFO 
+				c.l.c.f.c.UploadFileController - upload multipleSave 시작
+[2019-04-03 11:19:35:201628][http-nio-8080-exec-6] INFO 
+				c.l.c.f.c.UploadFileController - file 갯수0
+[2019-04-03 11:19:44:827][main] INFO 
+				com.lgchem.cms.CmsApplication - Starting CmsApplication on SM-060-PC with PID 58736 (D:\git\springbootSample\cms\target\classes started by SM-060 in D:\git\springbootSample\cms)
+[2019-04-03 11:19:44:828][main] INFO 
+				com.lgchem.cms.CmsApplication - The following profiles are active: local
+[2019-04-03 11:19:48:5025][main] INFO 
+				com.lgchem.cms.CmsApplication - Started CmsApplication in 4.849 seconds (JVM running for 6.381)
+[2019-04-03 11:20:05:22416][http-nio-8080-exec-8] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login Success... - com.lgchem.cms.login.domain.SecurityMember@17862: Username: abc; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER
+[2019-04-03 11:20:05:22418][http-nio-8080-exec-8] INFO 
+				c.l.c.h.CustomLoginSuccessHandler - Login IP.... - 0:0:0:0:0:0:0:1

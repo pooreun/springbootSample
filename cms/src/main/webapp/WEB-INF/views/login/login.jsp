@@ -6,6 +6,7 @@
 <title>cms</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+
 <script>
 
 </script>
@@ -28,6 +29,9 @@
     	<span style="color:green"><c:out value="${sessionScope.message}"/></span>
     	<c:remove var="message" scope="session" />
   	</c:if>
+  	
+  	<a href="/cms/login?lang=en">영문</a>
+  	<a href="/cms/login?lang=ko">한글</a>
 </div>
 </body>
 </html>

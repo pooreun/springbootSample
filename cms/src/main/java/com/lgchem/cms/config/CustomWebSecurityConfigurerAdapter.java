@@ -40,14 +40,14 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
     	//웹 리소스를 인증 해제 하는 로직을 넣자
     	// 메인페이지 : css나 js 같은것들도 여기에 포함시켜준다.
     	
-        web.ignoring().antMatchers("/openapi/**","/js/**");
+        web.ignoring().antMatchers("/openapi/**","/js/**","/css/**");
     }
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
         	.authorizeRequests()
-        	.antMatchers( "/userReg","/cms/login","/cms/main","/js/**","/index").permitAll()
+        	.antMatchers( "/userReg","/cms/login","/cms/main","/js/**","/index","/upload/**").permitAll()
         	//.antMatchers( "/apis/**","/main","/test", "/index.jsp", "/home", "/favicon.ico", "/resources/**", "/publish/**").permitAll()
         	//.antMatchers("/rest/**", "/secure/**", "/manage/**", "/admin/**", "/comment/admin/**").hasAnyRole("1","2","3","4","5","6","7")
         		.anyRequest().authenticated()
@@ -80,7 +80,7 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
 	            .sessionManagement()
 	            .invalidSessionUrl("/cms/login") // 세선이 없으면 해당 URL로 이동시킨다.
 	            .sessionAuthenticationErrorUrl("/cms/login") // 세션 인증 오류시 해당 URL로 이동
-	            .maximumSessions(1) // 동시 접속 1명
+	            .maximumSessions(3) // 동시 접속 1명
 	            .maxSessionsPreventsLogin(true) // session-management/concurrency-control@error-if-maximum-exceeded
 	            .expiredUrl("/expired-session") // session-management/concurrency-control@expired-url
 	            .sessionRegistry(sessionRegistry());	//로그아웃 후 다시 로그인 하려하면 로그인 안되는 현상을 막기 위해 추가
